@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+    <a asp-controller="Home" asp-action="Privacy" asp-fragment="bob" asp-route-PIZZA="peperoni"> Privacy</a>
+    <br />
+    <a asp-controller="Home" asp-action="ParamTest"> Param Test Sample</a>
+
+    <a asp-controller="Home" asp-action="ParamTest" asp-route-id="66"> Route Param</a>
+
+    <a href "/Home/ParamTest?id="66"> Query Param </a>
+
+
+</div>

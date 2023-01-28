@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Pizza Party";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>
+    I just got back from a Party with <b>@ViewBag.person</b>.
+    Can you believe we got to eat <b>@ViewBag.adj</b> pizza in <b>@ViewBag.place</b>?!
+    Everyone got to choose their own toppings.
+    I made a <b>@ViewBag.food1</b> and <b>@ViewBag.food2</b> pizza, which is my favorite!
+    They even stuffed the crust with <b>@ViewBag.food3</b>.
+    How <b>@ViewBag.feel</b>!
+    If that wasn't good enough already, <b>@ViewBag.celeb</b> was there singing <b>@ViewBag.song</b>.
+    I was so inspired by the music, I had to get up out of my seat and <b>@ViewBag.verb</b>.
+</p>
+<p>
+    mad lib found at https://www.glowwordbooks.com/blog/category/kids-online-mad-libs/?cn-reloaded=1
+</p>
+<form asp-controller="Home" asp-action="Index">
+    <button type="submit">Back</button>
+</form>

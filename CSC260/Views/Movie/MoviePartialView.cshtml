@@ -1,0 +1,11 @@
+﻿@model Movie
+
+@{
+	if (Model == null)
+	{
+		<h2>No Movie</h2>
+	}
+	else
+	<a asp-controller="Movie" asp-action="Edit" asp-route-id="@Model.Id"	class="btn btn-">
+	</a>
+}

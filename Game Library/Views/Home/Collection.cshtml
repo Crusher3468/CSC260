@@ -1,0 +1,61 @@
+﻿@model IEnumerable<Game>
+
+@if (Model == null)
+{
+	<h2>No Games provided</h2>
+}
+else
+{
+	<div class="p-3">
+		<h3>Games in collection: @Model.Count()</h3>
+	</div>
+
+	@foreach (Game game in Model)
+	{
+		<div class="p-3">
+			<div class="card border-success p-3" style="max-width: 30rem">
+				<img src="~/image/@game.Image" width = "220">
+					<div class="flex-column">
+						<h4>Title</h4>
+						<p>@game.Title</p>
+						<h4>Year Released</h4>
+						<p>@game.Year</p>
+						<h4>Platform</h4>
+						<p>@game.Platform</p>
+					</div>
+					<div class="flex-column">
+						<h5>Genre</h5>
+						<p>@game.Genre</p>
+						<h4>Rating</h4>
+					<p>@game.Rating</p>
+				</div>
+				@if ((game.LoanedTo != null) || (game.LoanedDate != null))
+				{
+					<div class="flex-column">
+						<h4>Loaned To</h4>
+						<p><b>@game.LoanedTo</b></p>
+						<h4>Loaned Date</h4>
+						<p><b>@game.LoanedDate</b></p>
+					</div>
+					<div class="p-3">
+						<form asp-controller="Home" asp-action="Return" method="post">
+							<button type="submit" class="btn btn-primary">
+								Return
+							</button>
+						</form>
+					</div>
+				}
+				else
+				{
+					<div class="p-3">
+						<form asp-controller="Home" asp-action="Loan" method="post">
+							<button type="submit" class="btn btn-primary">
+								Loan
+							</button>
+					</form>
+					</div>
+				}
+			</div>
+		</div>
+	}
+}

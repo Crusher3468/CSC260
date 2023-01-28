@@ -1,0 +1,32 @@
+﻿@model Game
+
+@{
+	<form asp-controller="Home" asp-action="Create" method="post">
+		<div class="card border-danger p-3">
+			<div class="row pb-2">
+				<h2 class="text-primary">Create Movie</h2>
+				<hr />
+			</div>
+			<div class="mb-3">
+				<label asp-for="Title"></label>
+				<input asp-for="Title" class="form-control" />
+			</div>
+			<div class="mb-3">
+				<label asp-for="Year"></label>
+				<input asp-for="Year" class="form-control" />
+			</div>
+			<div class="mb-3">
+				<label asp-for="Platform"></label>
+				<input asp-for="Platform" class="form-control" />
+			</div>
+			<div class="mb-3">
+				<label asp-for="Rating"></label>
+				<input asp-for="Rating" class="form-control" />
+			</div>
+			<button type="submit" class="btn btn-primary">
+				Create
+			</button>
+			<a asp-controller="Home" asp-action="Collection" class="btn btn-secondary">Collection</a>
+		</div>
+	</form>
+}

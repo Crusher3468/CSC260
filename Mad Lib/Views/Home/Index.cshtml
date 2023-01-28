@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <form asp-controller="Home" asp-action="MadLib">
+    <h1 class="display-4">Mad Lib</h1>
+    <h2>Fill in the boxes below</h2>
+    <div class="flex-column">
+        <input type="text" id="person" name="person" placeholder="Person"/>
+        <input type="text" id="adj1" name="adj1" placeholder="Adjective" />
+        <input type="text" id="place" name="place" placeholder="Place" />
+        <input type="text" id="food1" name="food1" placeholder="Food"/>
+        <input type="text" id="food2" name="food2" placeholder="Food"/>
+    </div>
+    <div class="flex-column">
+        <input type="text" id="food3" name="food3" placeholder="Food" />
+        <input type="text" id="adj2" name="adj2" placeholder="Adjective" />
+        <input type="text" id="celeb" name="celeb" placeholder="Celebrity" />
+        <input type="text" id="song" name="song" placeholder="Song Title" />
+        <input type="text" id="verb" name="verb" placeholder="Verb" />
+    </div>
+    <div>
+            <button type="submit">Get Mad Lib</button>   
+    </div>
+    </form>
+</div>
