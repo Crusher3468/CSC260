@@ -60,7 +60,7 @@ namespace Routing
 				name: "GalleryPage1",
 				pattern: "AllCows/Gallery/{id}/page" + "{pId}",
 				constraints: new { id = @"\d+", pId = @"\d+" },
-				//not possible because you cn use a required word and a variable in the same section of a url pattern
+				//not possible because you can't use a required word and a variable in the same section of a url pattern
 				defaults: new { controller = "Home", action = "GalPage1" });
 
 			app.MapControllerRoute(
